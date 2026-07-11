@@ -1,16 +1,16 @@
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Karla, Playfair_Display } from 'next/font/google';
 
 import type { Metadata } from 'next';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+const karla = Karla({
+  variable: '--font-karla',
+  subsets: ['latin', 'latin-ext'],
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const playfairDisplay = Playfair_Display({
+  variable: '--font-playfair-display',
+  subsets: ['latin', 'latin-ext'],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ const RootLayout = ({
 }>) => (
   <html
     lang='de'
-    className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    className={`${karla.variable} ${playfairDisplay.variable} h-full antialiased`}
   >
     <body className='min-h-full flex flex-col'>{children}</body>
   </html>
