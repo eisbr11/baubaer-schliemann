@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 4000",
+    "dev_ssl": "next dev -p 4000 --experimental-https",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lint:inspect": "npx @eslint/config-inspector@latest"
   },
   "dependencies": {
     "next": "16.2.10",
